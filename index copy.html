@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>웹 애플리케이션</title>
+</head>
+<body>
+    <div id="contents">
+        <div id="clock"></div>    
+        <!-- 로그인 폼 -->
+        <form id="loginForm">
+            <label for="username">ID :</label>
+            <input type="text" id="username">
+            <button class="button" onclick="login()">Log In</button>
+        </form>
+
+        <!-- 환영 메시지 -->
+        <div id="welcomeMessage" style="display: none;"></div>
+
+        <!-- 로그아웃 버튼 -->
+        <div id="logoutButtonContainer" style="display: none;">
+            <button class="button" id="logoutButton" onclick="logout()">로그아웃</button>
+        </div>
+
+        <!-- To-Do List -->
+        <div id="todoListContainer" style="display: none;">
+            <h2>To-Do List</h2>
+            <input type="text" id="task" placeholder="할 일 추가하기">
+            <button class="do_button" onclick="addTask()">추가</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
+
+    <div id="backgroundImage"></div>
+    <div id="weather">
+        <span>loading</span>
+        <span>....</span>
+      </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
